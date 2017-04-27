@@ -1,0 +1,20 @@
+﻿<Window x:Class="ZephyrTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZephyrTest"
+        mc:Ignorable="d"
+        Title="Zephyr Test App" Height="265.797" Width="353.551">
+    <Grid>
+        <ListBox 
+            x:Name="SelectedOperation" 
+            SelectedIndex="0" 
+            HorizontalAlignment="Left" Height="44" Margin="200,37,0,0" VerticalAlignment="Top" Width="119"/>
+        <Label Content="Selected Operation:" HorizontalAlignment="Left" Height="27" Margin="200,10,0,0" VerticalAlignment="Top" Width="115"/>
+        <Button Content="SELECT" HorizontalAlignment="Left" Height="32" Margin="200,86,0,0" VerticalAlignment="Top" Width="61" Click="Select_Operation_Click"/>
+        <Button Content="{Binding Path=Text, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}" HorizontalAlignment="Left" Height="32" Margin="200,157,0,0" VerticalAlignment="Top" Width="87" Click="Start_Stop_Click"/>
+        <ListView x:Name="OutputData" HorizontalAlignment="Left" Height="216" Margin="10,0,0,10" VerticalAlignment="Top" Width="157"/>
+
+    </Grid>
+</Window>
